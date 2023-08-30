@@ -1,10 +1,10 @@
 import { OutageFetcher } from '../src/outageFetcher';
 import fetch from 'node-fetch';
-import {tooEarly, matchingOutage, noMatchingID, devices, output} from './testData'
+import { tooEarly, matchingOutage, noMatchingID, devices, output } from './testData'
 
 jest.mock('node-fetch');
 const { Response } = jest.requireActual('node-fetch');
-const apiKey = "EltgJ5G8m44IzwE6UN2Y4B4NjPW77Zk6FJK3lL23"
+const apiKey = <API-KEY>
 const url = 'https://api.krakenflex.systems/interview-tests-mock-api/v1/outages'
 describe('OutageFetcher', () => {
     const outageFetcher = new OutageFetcher();
